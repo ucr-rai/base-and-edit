@@ -1,0 +1,30 @@
+You are given an informal problem statement (in the "<informal_problem>" tag) in natural language.
+You are also given a formal problem statement (in the "<formal_problem>" tag) in Lean 4, which aims to prove that a certain answer (in the "<original_answer>" tag) is correct for the original problem.
+
+Your task has two parts that you must answer together as one JSON object:
+
+1. Identify the answer-dependent local block in the formal statement: a contiguous substring of <formal_problem> whose content depends on the original answer. It must appear verbatim and exactly once in the formal statement.
+
+2. Write a Python function `def fill_answer(answer: str) -> str:` that, given any new answer string with the same shape as <original_answer>, returns the replacement substring for the answer-dependent block. The function must return ONLY the replacement substring, NOT the entire formal statement. The caller will perform `formal_problem.replace(original_local_block, fill_answer(answer), 1)` to obtain the new formal statement.
+
+Return only a JSON object with these fields:
+- "original_local_block": the exact substring of formal_problem that depends on the original answer.
+- "fill_answer_code": a Python source string of a `def fill_answer(answer: str) -> str:` function. The function must satisfy `fill_answer(<original_answer>) == <original_local_block>` exactly.
+
+Requirements:
+- "original_local_block" must be a contiguous substring of <formal_problem> appearing exactly once.
+- The function must handle variations in answer formatting (whitespace, brace styles, separators) robustly.
+- Do not output the full formal statement.
+- Do not output prose, markdown, or anything outside the JSON object.
+
+<informal_problem>
+{informal_problem}
+</informal_problem>
+
+<formal_problem>
+{formal_problem}
+</formal_problem>
+
+<original_answer>
+{original_answer}
+</original_answer>

@@ -1,0 +1,32 @@
+Solve the following math problem. Think step by step and solve it carefully.
+
+As you work, keep track of EVERY final-answer value that genuinely seems possible —
+not just your single best guess. This includes:
+- the answer your main approach gives,
+- answers that alternative valid approaches would give,
+- answers you get from branches you are unsure about,
+- answers that a small, easy-to-make mistake would plausibly lead to.
+
+After your reasoning, output your final-answer candidates inside a <ranked_answers> tag,
+with exactly {num_answers} answers, one per line, ranked from most likely correct to least
+likely correct (most confident first).
+
+Rules for the {num_answers} answers (inside the tag):
+- ALWAYS output exactly {num_answers} distinct answers. Never output fewer than {num_answers}.
+- List the answers you genuinely considered possible FIRST, ordered by your confidence.
+- Then fill every remaining slot with distinct plausible distractor answers — same type,
+  notation, and granularity as your genuine answers — until you have exactly {num_answers} lines.
+- Output exactly {num_answers} answers, one final answer per line.
+- Do not include any explanation inside the tag. No numbering, bullets, probabilities, or extra text.
+- The {num_answers} answers should be easy to substitute into the same formal statement later.
+- Keep all {num_answers} answers in the same answer style and type: all numbers, all fractions, all intervals, all tuples, all labels, all sets, etc.
+- All {num_answers} answers must be distinct.
+- Do not repeat the exact same string.
+- Do not repeat the same mathematical value or same label under different notation.
+- Use concise final-answer notation only.
+- Bad duplicate examples: "1/2" and "\frac{{1}}{{2}}"; "Evelyn" and "Student Evelyn"; "(3, pi/2)" and "(3, \frac{{\pi}}{{2}})".
+- Preserve mathematical notation when useful, e.g. fractions, radicals, intervals, tuples.
+- Prefer LaTeX-style notation when the answer is mathematical.
+
+Problem:
+{problem}

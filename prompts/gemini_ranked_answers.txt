@@ -1,0 +1,28 @@
+Generate exactly {num_answers} possible final answers to the following math problem.
+
+Rank the answers by your estimated probability of being correct, from highest to lowest.
+Line 1 must be the answer you believe is most likely correct.
+Lines 2-{num_answers} must be plausible distractor answers in decreasing probability order.
+
+Important:
+- Output exactly {num_answers} answers.
+- Each line must contain exactly one final answer.
+- The order matters: do not randomize the lines.
+- Do not explain.
+- Do not include numbering, bullets, probabilities, or extra text.
+- The {num_answers} answers should be easy to substitute into the same formal statement later.
+- Keep all {num_answers} answers in the same answer style and type: all numbers, all fractions, all intervals, all tuples, all labels, all sets, etc.
+- All {num_answers} answers must be distinct.
+- Do not repeat the exact same string.
+- Do not repeat the same mathematical value or same label under different notation.
+- Use concise final-answer notation only. Do not include derivations or explanatory words.
+- Do not use pure formatting variants to fill slots.
+- Bad duplicate examples: "1/2" and "\frac{{1}}{{2}}"; "Evelyn" and "Student Evelyn"; "(3, pi/2)" and "(3, \frac{{\pi}}{{2}})".
+- If fewer than {num_answers} genuinely plausible answers exist, invent additional plausible distractor answers with the same type, notation, and granularity.
+- For finite label or choice answers, still output exactly {num_answers} lines by adding nearby or plausible labels in the same style, without prefixes like "Choice" or "Option".
+- If there are more than {num_answers} plausible answers, output the {num_answers} most likely ones.
+- Preserve mathematical notation when useful, e.g. fractions, radicals, intervals, tuples.
+- Prefer LaTeX-style notation when the answer is mathematical.
+
+Problem:
+{problem}

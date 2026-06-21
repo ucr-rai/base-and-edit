@@ -1,0 +1,3 @@
+[submodule "kimina-lean-server"]
+	path = kimina-lean-server
+	url = git@github.com:ucr-rai/kimina-lean-server.git
